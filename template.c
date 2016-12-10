@@ -28,21 +28,22 @@ int main_prg(int argc, char** argv){
   /** implement here  **/
     
     //input mushikui
-    char ans[5001];
-    strncpy(ans,argv[1],5000);
+    char ans[500001];
+    //strncpy(ans,argv[1],500000);
+    scanf("%s",ans);
+    
+    //printf("\n\n\n%s\n",ans);
     
     //x->a
     fill_a(ans);
     
-    printf("\n\n\n%s\n",ans);
-    
-    
     //input keywords
-    char key[100];
+    char key[50000];
     while(scanf("%s",key)==1){
         //printf("_%s\n",key);
     }
     
+    printf("%s\n",ans);
     
 
   return(0);
@@ -51,7 +52,7 @@ int main_prg(int argc, char** argv){
 void fill_a(char* ans){
     //x->a
     int i;
-    for(i=0;i<5001;i++){
+    for(i=0;i<500001;i++){
         if(ans[i]=='x'){
             ans[i]='a';
         }
